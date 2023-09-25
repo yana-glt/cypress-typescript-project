@@ -21,11 +21,11 @@ class SearchResultPage{
         });
     };
 
-    isVideoImagesEqual(firstToCompare: number, secondToCompare: number) {
-        cy.get('#contents > ytd-video-renderer > #dismissible > ytd-thumbnail > #thumbnail > yt-image').as('listOfImages');
-        cy.get('@listOfImages').find('img').eq(firstToCompare).invoke('attr', 'src').then(src => {
-            cy.get('@listOfImages').find('img').eq(secondToCompare).invoke('attr', 'src').should("be.not.equal", src);
-        });   
+    isVideoImagesEqual(firstToCompare: number, secondToCompare: number) {  
+        cy.get('#contents > ytd-video-renderer > #dismissible > ytd-thumbnail > #thumbnail > yt-image > img').as('listOfImages');
+        cy.get('@listOfImages').eq(firstToCompare).should('have.attr', 'src').then(src => {
+            cy.get('@listOfImages').eq(secondToCompare).should('have.attr', 'src').should("be.not.equal", src);
+        });
     };
 }
 
