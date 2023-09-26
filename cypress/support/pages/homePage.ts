@@ -5,7 +5,8 @@ class HomePage{
     }
 
     closePopup(){
-        cy.get('.eom-buttons > :nth-child(1) > :nth-child(1) > yt-button-shape > .yt-spec-button-shape-next > yt-touch-feedback-shape > .yt-spec-touch-feedback-shape > .yt-spec-touch-feedback-shape__fill').click();
+        cy.get('.eom-buttons > :nth-child(1) > :nth-child(1) > yt-button-shape > button').click();
+    
     }
 
     typeToSearchBar(string: string){
