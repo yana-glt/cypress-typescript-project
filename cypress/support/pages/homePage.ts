@@ -1,12 +1,15 @@
+import 'cypress-if'
+
 class HomePage{
 
-    visitHomePAge(){
+    visitHomePage(){
         cy.visit("/");
     }
 
     closePopup(){
-        cy.get('.eom-buttons > :nth-child(1) > :nth-child(1) > yt-button-shape > button').click();
-    
+        cy.get('#dialog .body')
+            .if('visible').find('.eom-buttons > :nth-child(1) > :nth-child(1) button').click()
+            .else().log('**popup is not visible**');
     }
 
     typeToSearchBar(string: string){

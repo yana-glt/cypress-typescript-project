@@ -8,7 +8,7 @@ describe('Сheck inequality of the first videos on the youtube page', () => {
     const searchResultPage = new SearchResultPage();
 
     beforeEach(() => {     
-        homePage.visitHomePAge();
+        homePage.visitHomePage();
         homePage.closePopup();
         homePage.typeToSearchBar("funny cats");
     });
@@ -29,7 +29,7 @@ describe('Сheck inequality of the first videos on the youtube page', () => {
         searchResultPage.isVideoImagesEqual(0, 1);
     });
 
-    it.only('Сheck inequality of the first two videos', () => {
+    it('Сheck inequality of the first two videos', () => {
         searchResultPage.isVideoTitlesEqual(0, 1);
         // different videos can have the same channel and description, but differ in title and image
         // searchResultPage.isVideoChannelsEqual(0, 1);
