@@ -29,6 +29,63 @@ class HomePage{
     goToSubscriptionsPage(){
         cy.get('[role="navigation"] > #items > :nth-child(3)').click();
     }
+
+    checkTrendingTitle() {
+        cy.get(':nth-child(4) > #items > :nth-child(1) .title').invoke('text').should('be.equal', 'Trending');
+    }
+
+    goToTrendigPage() {
+        cy.get(':nth-child(4) > #items > :nth-child(1)').click();
+    }
+
+    checkMusicTitle() {
+        cy.get(':nth-child(4) > #items > :nth-child(2) .title').invoke('text').should('be.equal', 'Music');
+    }
+
+    goToMusicPage(){
+        cy.get(':nth-child(4) > #items > :nth-child(2)').click();
+    }
+
+    checkMoviesTitle() {
+        cy.get(':nth-child(4) > #items > :nth-child(3) .title').invoke('text').should('be.equal', 'Movies');
+    }
+
+    goToMoviesPage(){
+        cy.get(':nth-child(4) > #items > :nth-child(3)').click();
+    }
+
+    checkLiveTitle() {
+        cy.get(':nth-child(4) > #items > :nth-child(4) .title').invoke('text').should('be.equal', 'Live');
+    }
+
+    goToLivePage(){
+        cy.get(':nth-child(4) > #items > :nth-child(4)').click();
+    }
+
+    checkGamingTitle() {
+        cy.get(':nth-child(4) > #items > :nth-child(5) .title').invoke('text').should('be.equal', 'Gaming');
+    }
+
+    goToGamingPage(){
+        cy.get(':nth-child(4) > #items > :nth-child(5)').click();
+    }
+
+    checkNewsTitle() {
+        cy.get(':nth-child(4) > #items > :nth-child(6) .title').invoke('text').should('be.equal', 'News');
+    }
+
+    goToNewsPage(){
+        cy.get(':nth-child(4) > #items > :nth-child(6)').click();
+    }
+
+    checkSportsTitle() {
+        cy.get(':nth-child(4) > #items > :nth-child(7) .title').invoke('text').should('be.equal', 'Sports');
+    }
+
+    goToSportsPage(){
+        cy.get(':nth-child(4) > #items > :nth-child(7)').click();
+    }
+
 }
 
 export default HomePage;
