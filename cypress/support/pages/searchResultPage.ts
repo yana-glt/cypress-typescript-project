@@ -23,7 +23,6 @@ class SearchResultPage{
 
     isVideoImagesEqual(firstToCompare: number, secondToCompare: number) {
         cy.get('ytd-video-renderer #thumbnail img').should('have.length.greaterThan', 2).as('listOfImages');
-        cy.scrollTo(0, 500);
         cy.get('@listOfImages').eq(firstToCompare).should('have.attr', 'src').then(src => {
             cy.get('@listOfImages').eq(secondToCompare).should('have.attr', 'src').should("be.not.equal", src);
         });
