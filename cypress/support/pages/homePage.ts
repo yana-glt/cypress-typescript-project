@@ -3,7 +3,13 @@ import 'cypress-if'
 class HomePage{
 
     visitHomePage(){
-        cy.visit("/");
+        cy.visit("/", { 
+            onBeforeLoad(win) {
+                Object.defineProperty(win.navigator, 'language', { value: 'en-EN' }); 
+                Object.defineProperty(win.navigator, 'languages', { value: ['en'] }); 
+                Object.defineProperty(win.navigator, 'accept_languages', { value: ['en'] });
+            }, headers: {'Accept-Language': 'en',},
+        });
     }
 
     closePopup(){
@@ -18,6 +24,10 @@ class HomePage{
 
     typeToSearchBar(string: string){
         cy.get('#search-form > #container').type(`${string}{enter}`);
+    }
+
+    goToSubscriptionsPage(){
+        cy.get('[role="navigation"] > #items > :nth-child(3)').click();
     }
 }
 
