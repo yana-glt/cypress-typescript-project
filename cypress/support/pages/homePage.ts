@@ -27,7 +27,7 @@ class HomePage{
     }
 
     goToSubscriptionsPage(){
-        cy.get('[role="navigation"] > #items > :nth-child(3)').click();
+        cy.get(':nth-child(1) > #items > :nth-child(3)').click();
     }
 }
 
