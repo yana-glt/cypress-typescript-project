@@ -1,0 +1,32 @@
+{
+    "home_page": {
+        "trending_title": ":nth-child(4) > #items > :nth-child(1) .title",
+        "music_title": ":nth-child(4) > #items > :nth-child(2) .title",
+        "movies_title": ":nth-child(4) > #items > :nth-child(3) .title",
+        "live_title": ":nth-child(4) > #items > :nth-child(4) .title",
+        "gaming_title": ":nth-child(4) > #items > :nth-child(5) .title",
+        "news_title": ":nth-child(4) > #items > :nth-child(6) .title",
+        "sports_title": ":nth-child(4) > #items > :nth-child(7) .title"
+    },
+    "trending_page": {
+        "title": "#channel-container #text"
+    },
+    "music_page": {
+        "title": "#inner-header-container #title"
+    },
+    "movies_page": {
+        "title": "#channel-container #text"
+    },
+    "live_page": {
+        "title": "#inner-header-container #title"
+    },
+    "gaming_page": {
+        "title": "#inner-header-container #title"
+    },
+    "news_page": {
+        "title": "#inner-header-container #title"
+    },
+    "sports_page": {
+        "title": "#inner-header-container #title"
+    }
+}

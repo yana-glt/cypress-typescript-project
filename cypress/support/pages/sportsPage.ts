@@ -1,7 +1,9 @@
 class SportsPage {
 
     checkTitle(){
-        cy.get('#inner-header-container #title').invoke('text').should('be.equal', "Sports");
+        cy.fixture('selectors').then((selectors) => {
+            cy.get(selectors.sports_page.title).invoke('text').should('be.equal', 'Sports');
+        });
     }
 
 }

@@ -1,7 +1,9 @@
 class MoviesPage {
 
     checkTitle(){
-        cy.get('#channel-container #text').invoke('text').should('be.equal', "Movies");
+        cy.fixture('selectors').then((selectors) => {
+            cy.get(selectors.movies_page.title).invoke('text').should('be.equal', 'Movies');
+        });
     }
 
 }

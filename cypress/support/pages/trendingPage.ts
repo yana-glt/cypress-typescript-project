@@ -1,7 +1,9 @@
 class TrendingPage {
 
     checkTitle(){
-        cy.get('#channel-container #text').invoke('text').should('be.equal', "Trending");
+        cy.fixture('selectors').then((selectors) => {
+            cy.get(selectors.trending_page.title).invoke('text').should('be.equal', 'Trending');
+        });
     }
 
 }

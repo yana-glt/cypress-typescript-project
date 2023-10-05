@@ -1,7 +1,9 @@
 class NewsPage {
 
     checkTitle(){
-        cy.get('#inner-header-container #title').invoke('text').should('be.equal', "News");
+        cy.fixture('selectors').then((selectors) => {
+            cy.get(selectors.music_page.title).invoke('text').should('be.equal', 'News');
+        });
     }
 
 }

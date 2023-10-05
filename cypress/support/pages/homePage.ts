@@ -10,6 +10,7 @@ class HomePage{
                 Object.defineProperty(win.navigator, 'accept_languages', { value: ['en'] });
             }, headers: {'Accept-Language': 'en',},
         });
+        cy.fixture('selectors').as('selectors');
     }
 
     closePopup(){
@@ -31,60 +32,88 @@ class HomePage{
     }
 
     checkTrendingTitle() {
-        cy.get(':nth-child(4) > #items > :nth-child(1) .title').invoke('text').should('be.equal', 'Trending');
-    }
+        cy.get('@selectors').then((selectors) => {
+            cy.get(selectors.home_page.trending_title).invoke('text').should('be.equal', 'Trending');
+        });
+    };
 
     goToTrendigPage() {
-        cy.get(':nth-child(4) > #items > :nth-child(1)').click();
-    }
+        cy.get('@selectors').then((selectors) => {
+            cy.get(selectors.home_page.trending_title).click();
+        });
+    };
 
     checkMusicTitle() {
-        cy.get(':nth-child(4) > #items > :nth-child(2) .title').invoke('text').should('be.equal', 'Music');
-    }
+        cy.get('@selectors').then((selectors) => {
+            cy.get(selectors.home_page.music_title).invoke('text').should('be.equal', 'Music');
+        });
+    };
 
     goToMusicPage(){
-        cy.get(':nth-child(4) > #items > :nth-child(2)').click();
-    }
+        cy.get('@selectors').then((selectors) => {
+            cy.get(selectors.home_page.music_title).click();
+        });
+    };
 
     checkMoviesTitle() {
-        cy.get(':nth-child(4) > #items > :nth-child(3) .title').invoke('text').should('be.equal', 'Movies');
-    }
+        cy.get('@selectors').then((selectors) => {
+            cy.get(selectors.home_page.movies_title).invoke('text').should('be.equal', 'Movies');
+        });
+    };
 
     goToMoviesPage(){
-        cy.get(':nth-child(4) > #items > :nth-child(3)').click();
-    }
+        cy.get('@selectors').then((selectors) => {
+            cy.get(selectors.home_page.movies_title).click();
+        });
+    };
 
     checkLiveTitle() {
-        cy.get(':nth-child(4) > #items > :nth-child(4) .title').invoke('text').should('be.equal', 'Live');
-    }
+        cy.get('@selectors').then((selectors) => {
+            cy.get(selectors.home_page.live_title).invoke('text').should('be.equal', 'Live');
+        });
+    };
 
     goToLivePage(){
-        cy.get(':nth-child(4) > #items > :nth-child(4)').click();
-    }
+        cy.get('@selectors').then((selectors) => {
+            cy.get(selectors.home_page.live_title).click();
+        });
+    };
 
     checkGamingTitle() {
-        cy.get(':nth-child(4) > #items > :nth-child(5) .title').invoke('text').should('be.equal', 'Gaming');
-    }
+        cy.get('@selectors').then((selectors) => {
+            cy.get(selectors.home_page.gaming_title).invoke('text').should('be.equal', 'Gaming');
+        });
+    };
 
     goToGamingPage(){
-        cy.get(':nth-child(4) > #items > :nth-child(5)').click();
-    }
+        cy.get('@selectors').then((selectors) => {
+            cy.get(selectors.home_page.gaming_title).click();
+        });
+    };
 
     checkNewsTitle() {
-        cy.get(':nth-child(4) > #items > :nth-child(6) .title').invoke('text').should('be.equal', 'News');
-    }
+        cy.get('@selectors').then((selectors) => {
+            cy.get(selectors.home_page.news_title).invoke('text').should('be.equal', 'News');
+        });
+    };
 
     goToNewsPage(){
-        cy.get(':nth-child(4) > #items > :nth-child(6)').click();
-    }
+        cy.get('@selectors').then((selectors) => {
+            cy.get(selectors.home_page.news_title).click();
+        });
+    };
 
     checkSportsTitle() {
-        cy.get(':nth-child(4) > #items > :nth-child(7) .title').invoke('text').should('be.equal', 'Sports');
-    }
+        cy.get('@selectors').then((selectors) => {
+            cy.get(selectors.home_page.sports_title).invoke('text').should('be.equal', 'Sports');
+        });
+    };
 
     goToSportsPage(){
-        cy.get(':nth-child(4) > #items > :nth-child(7)').click();
-    }
+        cy.get('@selectors').then((selectors) => {
+            cy.get(selectors.home_page.sports_title).click();
+        });
+    };
 
 }
 
