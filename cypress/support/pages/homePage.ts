@@ -31,90 +31,48 @@ class HomePage{
         cy.get('[role="navigation"] > #items > :nth-child(3)').click();
     }
 
-    checkTrendingTitle() {
+    checkTrendingTitleAndGoToTrendingPage() {
         cy.get('@selectors').then((selectors) => {
-            cy.get(selectors.home_page.trending_title).invoke('text').should('be.equal', 'Trending');
-        });
-    };
+            cy.get(selectors.home_page.navigation_titles).contains('Trending').click();
+        })
+    }
 
-    goToTrendigPage() {
+    checkMusicTitleAndGoToMusicPage() {
         cy.get('@selectors').then((selectors) => {
-            cy.get(selectors.home_page.trending_title).click();
-        });
-    };
+            cy.get(selectors.home_page.navigation_titles).contains('Music').click();
+        })
+    }
 
-    checkMusicTitle() {
+    checkMoviesTitleAndGoToMoviesPage() {
         cy.get('@selectors').then((selectors) => {
-            cy.get(selectors.home_page.music_title).invoke('text').should('be.equal', 'Music');
-        });
-    };
+            cy.get(selectors.home_page.navigation_titles).contains('Movies').click();
+        })
+    }
 
-    goToMusicPage(){
+    checkLiveTitleAndGoToLivePage() {
         cy.get('@selectors').then((selectors) => {
-            cy.get(selectors.home_page.music_title).click();
-        });
-    };
+            cy.get(selectors.home_page.navigation_titles).contains('Live').click();
+        })
+    }
 
-    checkMoviesTitle() {
+    checkGamingTitleAndGoToGamingPage() {
         cy.get('@selectors').then((selectors) => {
-            cy.get(selectors.home_page.movies_title).invoke('text').should('be.equal', 'Movies');
-        });
-    };
+            cy.get(selectors.home_page.navigation_titles).contains('Gaming').click();
+        })
+    }
 
-    goToMoviesPage(){
+    checkNewsTitleAndGoToNewsPage() {
         cy.get('@selectors').then((selectors) => {
-            cy.get(selectors.home_page.movies_title).click();
-        });
-    };
+            cy.get(selectors.home_page.navigation_titles).contains('News').click();
+        })
+    }
 
-    checkLiveTitle() {
+    checkSportsTitleAndGoToSportsPage() {
         cy.get('@selectors').then((selectors) => {
-            cy.get(selectors.home_page.live_title).invoke('text').should('be.equal', 'Live');
-        });
-    };
-
-    goToLivePage(){
-        cy.get('@selectors').then((selectors) => {
-            cy.get(selectors.home_page.live_title).click();
-        });
-    };
-
-    checkGamingTitle() {
-        cy.get('@selectors').then((selectors) => {
-            cy.get(selectors.home_page.gaming_title).invoke('text').should('be.equal', 'Gaming');
-        });
-    };
-
-    goToGamingPage(){
-        cy.get('@selectors').then((selectors) => {
-            cy.get(selectors.home_page.gaming_title).click();
-        });
-    };
-
-    checkNewsTitle() {
-        cy.get('@selectors').then((selectors) => {
-            cy.get(selectors.home_page.news_title).invoke('text').should('be.equal', 'News');
-        });
-    };
-
-    goToNewsPage(){
-        cy.get('@selectors').then((selectors) => {
-            cy.get(selectors.home_page.news_title).click();
-        });
-    };
-
-    checkSportsTitle() {
-        cy.get('@selectors').then((selectors) => {
-            cy.get(selectors.home_page.sports_title).invoke('text').should('be.equal', 'Sports');
-        });
-    };
-
-    goToSportsPage(){
-        cy.get('@selectors').then((selectors) => {
-            cy.get(selectors.home_page.sports_title).click();
-        });
-    };
-
+            cy.get(selectors.home_page.navigation_titles).contains('Sports').click();
+        })
+    }
+    
 }
 
 export default HomePage;

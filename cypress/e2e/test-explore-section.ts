@@ -25,44 +25,37 @@ describe('Check that the explore section titles on the home page and on each sec
     });
     
     it('Check Trending title', () => {
-        homePage.checkTrendingTitle();
-        homePage.goToTrendigPage();
+        homePage.checkTrendingTitleAndGoToTrendingPage();
         trendingPage.checkTitle();
     });
 
     it('Check Music title', () => {
-        homePage.checkMusicTitle();
-        homePage.goToMusicPage();
+        homePage.checkMusicTitleAndGoToMusicPage();
         musicPage.checkTitle();
     });
 
     it('Check Movies title', () => {
-        homePage.checkMoviesTitle();
-        homePage.goToMoviesPage();
+        homePage.checkMoviesTitleAndGoToMoviesPage();
         moviesPage.checkTitle();
     });
 
     it('Check Live title', () => {
-        homePage.checkLiveTitle();
-        homePage.goToLivePage();
+        homePage.checkLiveTitleAndGoToLivePage();
         livePage.checkTitle();
     });
 
     it('Check Gaming title', () => {
-        homePage.checkGamingTitle();
-        homePage.goToGamingPage();
+        homePage.checkGamingTitleAndGoToGamingPage();
         gamingPage.checkTitle();
     });
 
     it('Check News title', () => {
-        homePage.checkNewsTitle();
-        homePage.goToNewsPage();
+        homePage.checkNewsTitleAndGoToNewsPage();
         newsPage.checkTitle();
     });
 
     it('Check Sports title', () => {
-        homePage.checkSportsTitle();
-        homePage.goToSportsPage();
+        homePage.checkSportsTitleAndGoToSportsPage();
         sportsPage.checkTitle();
     });
 
