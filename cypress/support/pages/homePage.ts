@@ -1,4 +1,5 @@
-import 'cypress-if'
+import 'cypress-if';
+import selectors from "../fixtures/selectors.json";
 
 class HomePage{
 
@@ -10,7 +11,6 @@ class HomePage{
                 Object.defineProperty(win.navigator, 'accept_languages', { value: ['en'] });
             }, headers: {'Accept-Language': 'en',},
         });
-        cy.fixture('selectors').as('selectors');
     }
 
     closePopup(){
@@ -32,47 +32,47 @@ class HomePage{
     }
 
     checkTrendingTitleAndGoToTrendingPage() {
-        cy.get('@selectors').then((selectors) => {
+        cy.fixture('selectors').then((selectors) => {
             cy.get(selectors.home_page.navigation_titles).contains('Trending').click();
         })
     }
 
     checkMusicTitleAndGoToMusicPage() {
-        cy.get('@selectors').then((selectors) => {
+        cy.fixture('selectors').then((selectors) => {
             cy.get(selectors.home_page.navigation_titles).contains('Music').click();
         })
     }
 
     checkMoviesTitleAndGoToMoviesPage() {
-        cy.get('@selectors').then((selectors) => {
+        cy.fixture('selectors').then((selectors) => {
             cy.get(selectors.home_page.navigation_titles).contains('Movies').click();
         })
     }
 
     checkLiveTitleAndGoToLivePage() {
-        cy.get('@selectors').then((selectors) => {
+        cy.fixture('selectors').then((selectors) => {
             cy.get(selectors.home_page.navigation_titles).contains('Live').click();
         })
     }
 
     checkGamingTitleAndGoToGamingPage() {
-        cy.get('@selectors').then((selectors) => {
+        cy.fixture('selectors').then((selectors) => {
             cy.get(selectors.home_page.navigation_titles).contains('Gaming').click();
         })
     }
 
     checkNewsTitleAndGoToNewsPage() {
-        cy.get('@selectors').then((selectors) => {
+        cy.fixture('selectors').then((selectors) => {
             cy.get(selectors.home_page.navigation_titles).contains('News').click();
         })
     }
 
     checkSportsTitleAndGoToSportsPage() {
-        cy.get('@selectors').then((selectors) => {
+        cy.fixture('selectors').then((selectors) => {
             cy.get(selectors.home_page.navigation_titles).contains('Sports').click();
         })
     }
-    
+
 }
 
 export default HomePage;

@@ -2,7 +2,7 @@ class MusicPage {
 
     checkTitle(){
         cy.fixture('selectors').then((selectors) => {
-            cy.get(selectors.music_page.title).invoke('text').should('be.equal', 'Music');
+            cy.xpath(selectors.generic_title_for_each_explore_section_page).invoke('text').should('be.equal', 'Music');
         });
     }
 
