@@ -11,6 +11,7 @@
   "devDependencies": {
     "cypress": "^13.2.0",
     "cypress-if": "^1.10.5",
+    "cypress-xpath": "^2.0.1",
     "typescript": "^5.2.2"
   }
 }

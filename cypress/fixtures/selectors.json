@@ -1,0 +1,7 @@
+{
+    "home_page": {
+        "navigation_titles": "#endpoint .title"
+    },
+    "generic_title_for_each_explore_section_page": "//div[@id='channel-header-container']//yt-formatted-string[@id='title' or @id='text']"
+
+}
