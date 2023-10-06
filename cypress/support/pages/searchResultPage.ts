@@ -28,6 +28,10 @@ class SearchResultPage{
             cy.get('@listOfImages').eq(secondToCompare).should('have.attr', 'src').should("be.not.equal", src);
         });
     };
+
+    goToVideoPage(number: number){
+        cy.get('ytd-video-renderer #thumbnail img').eq(number).click();
+    };
 }
 
 export default SearchResultPage;
